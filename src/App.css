@@ -1,0 +1,220 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main App Container */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f8fa;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section {
+  flex: 1;
+  max-width: 400px; /* Prevents the sections from becoming too wide */
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+h3 {
+  font-size: 1.4em;
+  color: #333;
+}
+
+.nameInput, .header {
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.name-field,
+.number-field {
+  width: 80%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.name-field:focus,
+.number-field:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-color: #007bff;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 18px;
+  font-size: 1em;
+  border:2px solid rgb(59, 179, 121);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.save-btn {
+  background-color: #28a745;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  border: none;
+  cursor: pointer;
+  padding: 4px 10px;
+  font-size: 0.9em;
+  border-radius: 4px;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Result Box */
+.result-box {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #007bff;
+  background-color: #f0f8ff;
+  border: 1px solid #007bff;
+}
+
+.save-btn:hover,
+button:hover {
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+/* Responsive Styling */
+
+/* Mobile styling for screens up to 480px */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+  }
+
+  .section {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .name-field, .number-field {
+    width: 90%;
+  }
+
+  .result-box {
+    font-size: 1.1em;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+}
+
+/* Tablet styling for screens between 481px and 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+  }
+
+  .section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  .name-field, .number-field {
+    width: 85%;
+  }
+
+  .result-box {
+    font-size: 1.2em;
+  }
+}
+
+/* Desktop styling for screens above 768px */
+@media (min-width: 769px) {
+  .container {
+    flex-direction: row;
+    gap: 40px;
+    width: 70%;
+  }
+
+  .section {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  .name-field, .number-field {
+    width: 80%;
+  }
+
+  .result-box {
+    font-size: 1.2em;
+  }
+}
